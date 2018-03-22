@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Source+Code+Pro|Spectral" rel="stylesheet">
 </head>
 <body class="bg-white">
     <div id="app" class="w-full">

@@ -7,17 +7,15 @@ use App\Post;
 
 class PostsController extends Controller
 {
-    public function index()
+    public function index(Post $posts)
     {
-        $posts = Post::paginate(5);
-
         return view('posts.index')
-            ->with('posts', $posts);
+            ->with('posts', $posts->paginate(15));
     }
 
-    public function show($year, $month, $day, $slug)
+    public function show($year, $month, $day, $slug, Post $posts)
     {
         return view('posts.show')
-            ->with('post', Post::find($year, $month, $day, $slug));
+            ->with('post', $posts->find($year, $month, $day, $slug));
     }
 }

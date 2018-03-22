@@ -19,12 +19,13 @@ class PostTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
-        $response->assertSee('<h1>Some title</h1>');
+        $response->assertSee('Some title');
     }
 
     /** @test */
     public function it_retrieves_a_single_post()
     {
+        $this->withoutExceptionHandling();
         Storage::fake('posts');
         Storage::disk('posts')->put('2018-02-23.this-is-a-slug.md', file_get_contents(base_path('tests/__fixtures__/blog-post.md')));
         Storage::disk('posts')->assertExists('2018-02-23.this-is-a-slug.md');
@@ -32,7 +33,7 @@ class PostTest extends TestCase
         $response = $this->get('/2018/02/23/this-is-a-slug');
 
         $response->assertStatus(200);
-        $response->assertSee('<h1>Some heading</h1>');
+        $response->assertSee('Some heading');
     }
 
     /** @test */

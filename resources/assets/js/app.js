@@ -8,5 +8,9 @@
 require('./bootstrap');
 
 const feather = require("feather-icons");
-
 feather.replace();
+
+const highlightjs = require("highlight.js");
+highlightjs.initHighlightingOnLoad();
+
+require('highlight.js/styles/github.css');

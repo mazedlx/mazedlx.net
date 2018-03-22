@@ -56,3 +56,15 @@
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+
+ blockquote {
+     @apply .border .bg-grey-light .m-4 .p-4;
+ }
+
+ pre {
+     @apply .m-4 .p-2;
+ }
+
+ p {
+     @apply .m-2;
+ }

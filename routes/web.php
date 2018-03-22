@@ -13,3 +13,5 @@
 
 Route::get('/', 'PostsController@index')->name('posts.index');
 Route::get('/{year}/{month}/{day}/{slug}', 'PostsController@show')->name('posts.show');
+
+Route::get('/tags/{tag}', 'TagsController@show')->name('tags.show');

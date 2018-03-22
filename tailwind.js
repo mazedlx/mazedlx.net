@@ -127,41 +127,26 @@ let colors = {
   "pink-lighter": "#ffbbca",
   "pink-lightest": "#ffebef",
 
-  // /* HSL */
-  // $color1: hsla(207%, 12%, 43%, 1);   PAYNE'S GREY
-  // $color2: hsla(90%, 17%, 80%, 1);   PASTEL GRAY
-  // $color3: hsla(82%, 52%, 84%, 1); TEA GREEN
-  // $color4: hsla(36%, 26%, 68%, 1); KHAKI
-  // $color5: hsla(317%, 24%, 26%, 1); PURPLE TAUPE
-
-  // /* RGB */
-  // $color1: rgba(96, 111, 123, 1);
-  // $color2: rgba(203, 212, 194, 1);
-  // $color3: rgba(219, 235, 192, 1);
-  // $color4: rgba(195, 178, 153, 1);
-  // $color5: rgba(82, 50, 73, 1);
-
-
   get ["brand-darkest"]() {
-    return this["orange-darkest"];
+    return this["teal-darkest"];
   },
   get ["brand-darker"]() {
-    return this["orange-darker"];
+    return this["teal-darker"];
   },
   get ["brand-dark"]() {
-    return this["orange-dark"];
+    return this["teal-dark"];
   },
   get ["brand"]() {
-    return this["orange"];
+    return this["teal"];
   },
   get ["brand-light"]() {
-    return this["orange-light"];
+    return this["teal-light"];
   },
   get ["brand-lighter"]() {
-    return this["orange-lighter"];
+    return this["teal-lighter"];
   },
   get ["brand-lightest"]() {
-    return this["orange-lightest"];
+    return this["teal-lightest"];
   }
 };
 
@@ -227,37 +212,39 @@ module.exports = {
 
   fonts: {
     sans: [
-      "system-ui",
-      "BlinkMacSystemFont",
-      "-apple-system",
-      "Segoe UI",
-      "Roboto",
-      "Oxygen",
-      "Ubuntu",
-      "Cantarell",
+      // "system-ui",
+      // "BlinkMacSystemFont",
+      // "-apple-system",
+      // "Segoe UI",
+      // "Roboto",
+      // "Oxygen",
+      // "Ubuntu",
+      // "Cantarell",
       "Fira Sans",
-      "Droid Sans",
-      "Helvetica Neue",
+      // "Droid Sans",
+      // "Helvetica Neue",
       "sans-serif"
     ],
     serif: [
-      "Constantia",
-      "Lucida Bright",
-      "Lucidabright",
-      "Lucida Serif",
-      "Lucida",
-      "DejaVu Serif",
-      "Bitstream Vera Serif",
-      "Liberation Serif",
-      "Georgia",
+      // "Constantia",
+      // "Lucida Bright",
+      // "Lucidabright",
+      // "Lucida Serif",
+      // "Lucida",
+      // "DejaVu Serif",
+      // "Bitstream Vera Serif",
+      // "Liberation Serif",
+      // "Georgia",
+      "Spectral",
       "serif"
     ],
     mono: [
-      "Menlo",
-      "Monaco",
-      "Consolas",
-      "Liberation Mono",
-      "Courier New",
+      // "Menlo",
+      // "Monaco",
+      // "Consolas",
+      // "Liberation Mono",
+      // "Courier New",
+      "Source Code Pro",
       "monospace"
     ]
   },
