@@ -13,13 +13,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Source+Code+Pro|Spectral" rel="stylesheet">
+    <!-- Scripts -->
+    <script defer src="{{ asset('js/app.js') }}"></script>
 </head>
 <body class="bg-white">
     <div id="app" class="w-full">
         @yield('content')
     </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

@@ -11,6 +11,8 @@
         "laravel-frontend-presets/tailwindcss": "^0.5.2",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
+        "spatie/laravel-csp": "^1.0",
+        "spatie/laravel-responsecache": "^4.3",
         "spatie/yaml-front-matter": "^2.0"
     },
     "require-dev": {

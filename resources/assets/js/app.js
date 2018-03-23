@@ -5,15 +5,12 @@
  * application frontend using useful Laravel and JavaScript libraries.
  */
 
-require('./bootstrap');
 
 const feather = require("feather-icons");
 feather.replace();
 
 const highlightjs = require("highlight.js");
 highlightjs.initHighlightingOnLoad();
-
-require('highlight.js/styles/github.css');
 
 const turbolinks = require("turbolinks")
 turbolinks.start()

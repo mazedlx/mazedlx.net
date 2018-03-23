@@ -78,9 +78,9 @@ class Post
 
     public function paginate($perPage)
     {
-        $currentPage = request('page', 0);
+        $currentPage = request('page', 1);
         $items = Cache::get('posts.paginate.' . $currentPage , function () use ($perPage, $currentPage) {
-            return $this->all()->slice($currentPage * $perPage, $perPage);
+            return $this->all()->slice(($currentPage - 1) * $perPage, $perPage);
         });
 
         return new LengthAwarePaginator($items, $this->all()->count(), $perPage);
