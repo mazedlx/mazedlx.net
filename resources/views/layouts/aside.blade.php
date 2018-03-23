@@ -1,4 +1,4 @@
-<aside class="lg:w-1/4 w-full bg-grey-dark h-auto lg:h-screen p-8 flex flex-col lg:justify-end justify-start sticky pin-l pin-t">
+<aside class="lg:w-1/4 w-full bg-grey-dark h-auto lg:h-screen p-8 flex flex-col lg:justify-end justify-start lg:sticky lg:pin-l lg:pin-t">
     <div>
         <div class="text-white text-2xl font-bold font-serif border-b pb-4">
             <a class="no-underline text-white hover:text-brand" href="/">blog.mazedlx.net</a>
