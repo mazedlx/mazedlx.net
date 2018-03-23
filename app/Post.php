@@ -35,10 +35,7 @@ class Post
     {
         return $this->all()
             ->filter(function ($post) use ($tag) {
-                if(! is_array($post->tags)) {
-                    return false;
-                }
-                return in_array($tag, $post->tags);
+                return collect($post->tags)->contains($tag);
             }, function () {
                 abort(404);
             });
