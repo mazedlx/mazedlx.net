@@ -11,7 +11,7 @@ class TagsController extends Controller
     {
         $posts = $posts->taggedWith($tag);
 
-        return view('posts.index')
+        return view('tags.index')
             ->with('posts', $posts);
     }
 }

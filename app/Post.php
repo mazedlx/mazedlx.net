@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class Post
 {
@@ -43,7 +44,7 @@ class Post
 
     public function retrieveFromDisk()
     {
-        return collect(Storage::disk('posts')->allFiles())
+        return collect(Storage::disk('posts')->files())
             ->filter(function ($path) {
                 return ends_with($path, '.md');
             })
@@ -77,8 +78,11 @@ class Post
 
     public function paginate($perPage)
     {
-        return Cache::get('posts.paginate.' . request('page', 0), function () use ($perPage) {
-            return $this->all()->slice(request('page', 0) * $perPage, $perPage);
+        $currentPage = request('page', 0);
+        $items = Cache::get('posts.paginate.' . $currentPage , function () use ($perPage, $currentPage) {
+            return $this->all()->slice($currentPage * $perPage, $perPage);
         });
+
+        return new LengthAwarePaginator($items, $this->all()->count(), $perPage);
     }
 }

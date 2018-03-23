@@ -14,3 +14,6 @@ const highlightjs = require("highlight.js");
 highlightjs.initHighlightingOnLoad();
 
 require('highlight.js/styles/github.css');
+
+const turbolinks = require("turbolinks")
+turbolinks.start()
