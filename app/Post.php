@@ -65,7 +65,7 @@ class Post
                     'title' => $document->title,
                     'category' => $document->category ?? 'general',
                     'contents' => Markdown::convertToHtml($document->body()),
-                    'summary' => Markdown::convertToHtml($document->summary ?? $document->body()),
+                    'summary' => Markdown::convertToHtml($document->summary),
                     'summary_short' => mb_strimwidth($document->summary ?? $document->body(), 0, 140, "..."),
                     'preview_image' => $document->preview_image ? env('APP_URL') . $document->preview_image : 'some-preview-image.png',
                     'published' => $document->published ?? true,

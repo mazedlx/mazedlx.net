@@ -3,13 +3,13 @@
 @section('content')
 <div class="flex flex-col-reverse lg:flex-row">
 
-    @include('layouts.aside')
 
     <div class="w-3/4 p-8 flex flex-col">
         <content class="w-5/6 mx-auto">
             @each('layouts.article', $posts, 'post')
         </content>
     </div>
+    @include('layouts.aside')
 </div>
 @include('layouts.pagination')
 @stop
