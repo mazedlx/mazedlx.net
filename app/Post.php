@@ -7,7 +7,6 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
-use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class Post
@@ -62,8 +61,8 @@ class Post
                     'external_url' => $document->external_url ?? false,
                     'title' => $document->title,
                     'category' => $document->category ?? 'general',
-                    'contents' => Markdown::convertToHtml($document->body()),
-                    'summary' => Markdown::convertToHtml($document->summary),
+                    'contents' => markdown($document->body()),
+                    'summary' => markdown($document->summary),
                     'summary_short' => mb_strimwidth($document->summary ?? $document->body(), 0, 140, "..."),
                     'preview_image' => $document->preview_image ? env('APP_URL') . $document->preview_image : 'some-preview-image.png',
                     'published' => $document->published ?? true,
@@ -79,7 +78,7 @@ class Post
     public function paginate($perPage)
     {
         $currentPage = request('page', 1);
-        $items = Cache::get('posts.paginate.' . $currentPage , function () use ($perPage, $currentPage) {
+        $items = Cache::get('posts.paginate.' . $currentPage, function () use ($perPage, $currentPage) {
             return $this->all()->slice(($currentPage - 1) * $perPage, $perPage);
         });
 

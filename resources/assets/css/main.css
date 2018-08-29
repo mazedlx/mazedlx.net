@@ -57,19 +57,19 @@
  * @import "utilities/skew-transforms";
  */
 
- blockquote {
-     @apply .border .bg-grey-light .m-4 .p-4;
- }
+blockquote {
+  @apply .border .bg-grey-light .m-4 .p-4;
+}
 
- pre {
-     @apply .m-4 .p-2;
- }
+pre {
+  @apply .m-4 .p-2;
+}
 
- p {
-     @apply .m-2;
- }
+p {
+  @apply .m-2;
+}
 
- /*
+/*
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 */
 
@@ -173,4 +173,16 @@ article a {
 
 article a:hover {
   @apply .text-teal;
+}
+
+iframe {
+  @apply max-w-full;
+}
+
+.embed-container {
+  @apply relative overflow-hidden w-full h-auto;
+  padding-bottom: 56.25%; /* ratio 16x9 */
+}
+.embed-container iframe {
+  @apply absolute pin-t pin-l w-full h-full;
 }
