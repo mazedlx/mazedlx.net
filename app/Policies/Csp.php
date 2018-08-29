@@ -27,7 +27,11 @@ class Csp extends Policy
             ->addDirective(Directive::CONNECT, 'self')
             ->addDirective(Directive::DEFAULT, 'self')
             ->addDirective(Directive::FORM_ACTION, 'self')
-            ->addDirective(Directive::IMG, ['self', 'blog.mazedlx.net'])
+            ->addDirective(Directive::IMG, [
+                'self',
+                'blog.mazedlx.net',
+                'images-eu.ssl-images-amazon.com',
+            ])
             ->addDirective(Directive::MEDIA, 'self')
             ->addDirective(Directive::OBJECT, 'self')
             ->addDirective(Directive::SCRIPT, 'self')
