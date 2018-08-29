@@ -11,11 +11,18 @@
         </div>
         <div class="text-white leading-normal pt-4">
             <ul class="list-reset flex flex-row justify-between items-center">
-                <a target="_blank" href="https://twitter.com/mazedlx" class="text-white no-underline hover:text-brand"><i data-feather="twitter"></i></a>
-                <a target="_blank" href="https://github.com/mazedlx" class="text-white no-underline hover:text-brand"><i data-feather="github"></i></a>
-                <a target="_blank" href="https://mazedlx.net" class="text-white no-underline hover:text-brand"><i data-feather="link"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/christian-leo-pernold-46028335" class="text-white no-underline hover:text-brand"><i data-feather="linkedin"></i></a>
-                <a href="mailto:mazedlx@gmail.com" class="text-white no-underline hover:text-brand"><i data-feather="mail"></i></a>
+                <a target="_blank" href="https://twitter.com/mazedlx" class="text-white no-underline hover:text-brand">
+                    @svg('twitter', 'fill-current h-6 w-6')
+                </a>
+                <a target="_blank" href="https://github.com/mazedlx" class="text-white no-underline hover:text-brand">
+                    @svg('github', 'fill-current h-6 w-8')
+                </a>
+                <a target="_blank" href="https://mazedlx.net" class="text-white no-underline hover:text-brand">
+                    @svg('link', 'fill-current h-6 w-6')
+                </a>
+                <a href="mailto:mazedlx@gmail.com" class="text-white no-underline hover:text-brand">
+                    @svg('envelope', 'fill-current h-6 w-8')
+                </a>
             </ul>
         </div>
     </div>
