@@ -9,3 +9,9 @@
     yarn prod
     php artisan up
 @endtask
+
+@task('posts', ['on' => 'web'])
+    cd /var/www/html/blog
+    git stash
+    git pull
+@endtask
