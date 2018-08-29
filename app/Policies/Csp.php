@@ -32,6 +32,10 @@ class Csp extends Policy
                 'blog.mazedlx.net',
                 'images-eu.ssl-images-amazon.com',
             ])
+            ->addDirective(Directive::FRAME, [
+                'self',
+                'www.youtube.com',
+            ])
             ->addDirective(Directive::MEDIA, 'self')
             ->addDirective(Directive::OBJECT, 'self')
             ->addDirective(Directive::SCRIPT, 'self')
