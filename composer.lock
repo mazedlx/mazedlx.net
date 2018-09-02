@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a80452ddc0e46ca04703d1967449c5e1",
+    "content-hash": "2f3b7247ccf52aaf9cb13e3d1685ba2e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -849,6 +849,65 @@
                 "storage"
             ],
             "time": "2018-08-22T07:45:22+00:00"
+        },
+        {
+            "name": "mazedlx/laravel-feature-policy",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mazedlx/laravel-feature-policy.git",
+                "reference": "e960fd3bf880b3b386e023b275c63c5cdb4d53ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mazedlx/laravel-feature-policy/zipball/e960fd3bf880b3b386e023b275c63c5cdb4d53ad",
+                "reference": "e960fd3bf880b3b386e023b275c63c5cdb4d53ad",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "~5.5.0|~5.6.0",
+                "illuminate/support": "~5.5.0|~5.6.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.5|~3.6",
+                "phpunit/phpunit": "^6.5|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mazedlx\\FeaturePolicy\\FeaturePolicyServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mazedlx\\FeaturePolicy\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Leo-Pernold",
+                    "email": "mazedlx@gmail.com"
+                }
+            ],
+            "description": "Add Feature-Policy headers to the responses of a Laravel app",
+            "keywords": [
+                "feature-policy",
+                "headers",
+                "laravel",
+                "laravel-feature-policy",
+                "security"
+            ],
+            "time": "2018-09-02T14:50:16+00:00"
         },
         {
             "name": "monolog/monolog",
