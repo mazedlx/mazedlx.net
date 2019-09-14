@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Str;
 
 class Post
 {
@@ -45,10 +46,10 @@ class Post
     {
         return collect(Storage::disk('posts')->files())
             ->filter(function ($path) {
-                return ends_with($path, '.md');
+                return Str::endsWith($path, '.md');
             })
             ->map(function ($path) {
-                $filename = str_after($path, 'posts/');
+                $filename = Str::after($path, 'posts/');
                 [$date, $slug, $extension] = explode('.', $filename, 3);
                 $date = Carbon::createFromFormat('Y-m-d', $date);
                 $document = YamlFrontMatter::parse(Storage::disk('posts')->get($path));
@@ -62,7 +63,7 @@ class Post
                     'title' => $document->title,
                     'category' => $document->category ?? 'general',
                     'contents' => markdown($document->body()),
-                    'summary' => markdown($document->summary),
+                    'summary' => markdown($document->summary ?? ''),
                     'summary_short' => mb_strimwidth($document->summary ?? $document->body(), 0, 140, "..."),
                     'preview_image' => $document->preview_image ? env('APP_URL') . $document->preview_image : 'some-preview-image.png',
                     'published' => $document->published ?? true,

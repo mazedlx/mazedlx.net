@@ -9,7 +9,7 @@ use Illuminate\Support\Carbon;
 
 class PostTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

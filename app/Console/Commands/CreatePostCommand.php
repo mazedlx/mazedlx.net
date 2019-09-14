@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class CreatePostCommand extends Command
 {
@@ -43,7 +44,7 @@ class CreatePostCommand extends Command
     public function handle()
     {
         $title = $this->argument('title');
-        $slug = strtolower(str_slug($title));
+        $slug = strtolower(Str::slug($title));
         $options = $this->options();
         $date = $options['date'] == 'now' ? Carbon::now() : Carbon::createFromFormat('Y-m-d', $options['date']);
         $published = $options['publish'] == 'yes' ? '' : 'published: no';
