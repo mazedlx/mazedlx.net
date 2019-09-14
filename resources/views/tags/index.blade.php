@@ -9,6 +9,6 @@
             @each('layouts.article', $posts, 'post')
         </content>
     </div>
-    @include('layouts.aside')
+    @include('layouts.side')
 </div>
 @stop
