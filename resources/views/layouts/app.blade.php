@@ -20,7 +20,7 @@
     <script defer src="{{ mix('js/app.js') }}"></script>
 </head>
 <body>
-    <div id="app" class="w-full bg-gray-200">
+    <div id="app" class="w-full bg-gray-100">
         @yield('content')
     </div>
 </body>

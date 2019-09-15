@@ -1,4 +1,4 @@
-<article class="bg-gray-200 p-8">
+<article class="bg-gray-100 p-8">
     <h1 class="font-bold text-2xl hover:underline font-serif">
         <a class="" href="{{ $post->url }}">
             {{ $post->title}}
