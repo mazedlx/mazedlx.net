@@ -3,3 +3,44 @@
 @tailwind components;
 
 @tailwind utilities;
+
+pre {
+    @apply m-4 shadow-lg;
+}
+
+p > code, 
+ul > li > code {
+    @apply px-1 bg-gray-300 text-gray-700 font-mono;
+}
+
+p > code {
+    @apply text-lg;
+}
+
+p {
+    @apply mb-4 font-serif text-gray-900 leading-loose text-xl text-justify;
+}
+
+blockquote > p {
+    @apply pl-2 text-gray-600 border-gray-600 border-l-8 my-2;
+}
+
+h1 {
+    @apply text-4xl font-bold font-serif font-medium tracking-wide my-2;
+}
+
+h2 {
+    @apply text-2xl font-bold font-serif font-medium tracking-wide my-2;
+}
+
+h3 {
+   @apply text-lg font-bold font-serif font-medium tracking-wide my-2;
+}
+
+ul {
+    @apply ml-6;
+}
+
+ul > li {
+    @apply list-disc font-serif text-lg list-outside;
+}

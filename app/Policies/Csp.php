@@ -39,7 +39,14 @@ class Csp extends Policy
             ->addDirective(Directive::MEDIA, 'self')
             ->addDirective(Directive::OBJECT, 'self')
             ->addDirective(Directive::SCRIPT, 'self')
-            ->addDirective(Directive::STYLE, 'self');
+            ->addDirective(Directive::STYLE, [
+                'self',
+                'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=',
+                'sha256-SdHSyVDPvQg1yn/bYnVWQS6ia0WFKQebbnKVl/BvFQI=',
+                'sha256-ja0z+lPRcUPYhi+sdtJJEKlXmCMywxJtCLxCQzKd2K0=',
+                'sha256-/mau8oeIz2YLI4P++2nDYKPBJi8XruHTrqfN5b3JFMA=',
+                'sha256-izSW/CnR2rAHp5hWH5wL1h81efEPSDMbJJsjRuQ3CL4=',
+            ]);
     }
 
     /**

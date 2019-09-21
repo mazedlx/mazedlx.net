@@ -2,14 +2,12 @@
 
 @section('content')
 <div class="flex flex-col md:flex-row">
-    <div class="w-full px-4 py-2 md:w-2/3 lg:w-3/4 xl:w-4/5">        
-        <div class="font-serif text-2xl font-bold">{{ $post->title}}</div>
+    <div class="mx-auto w-full lg:w-1/2 xl:w-1/2 px-4 py-2">        
+        <div class="font-serif text-5xl font-bold">{{ $post->title}}</div>
         <div class="font-sans text-gray-500 pb-2">{{$post->date->diffForHumans() }}</div>
-        <div class="font-sans text-gray-900 pb-2 leading-loose">{!! $post->contents !!}</div>
+        <div class="pb-2">{!! $post->contents !!}</div>
         
         @include('layouts.tags') 
     </div>    
-    
-    @include('layouts.side')
 </div>
 @stop
