@@ -3,6 +3,7 @@
 namespace App\Policies;
 
 use Spatie\Csp\Directive;
+use Spatie\Csp\Keyword;
 use Spatie\Csp\Policies\Policy;
 
 class Csp extends Policy
@@ -12,9 +13,9 @@ class Csp extends Policy
      */
     public function configure()
     {
-        $this->setDefaultPolicies();
-        $this->addGoogleFontPolicies();
-        $this->addGravatarPolicies();
+        $this->setDefaultPolicies()
+            ->addGoogleFontPolicies()
+            ->addGravatarPolicies();
     }
 
     /**
@@ -28,24 +29,24 @@ class Csp extends Policy
             ->addDirective(Directive::DEFAULT, 'self')
             ->addDirective(Directive::FORM_ACTION, 'self')
             ->addDirective(Directive::IMG, [
-                'self',
+		Keyword::SELF,
                 'blog.mazedlx.net',
                 'images-eu.ssl-images-amazon.com',
             ])
             ->addDirective(Directive::FRAME, [
-                'self',
+                Keyword::SELF,
                 'www.youtube.com',
             ])
-            ->addDirective(Directive::MEDIA, 'self')
-            ->addDirective(Directive::OBJECT, 'self')
-            ->addDirective(Directive::SCRIPT, 'self')
+            ->addDirective(Directive::MEDIA, Keyword::SELF)
+            ->addDirective(Directive::OBJECT, Keyword::SELF)
+	    ->addDirective(Directive::SCRIPT, [
+		 Keyword::SELF,
+		 Keyword::UNSAFE_EVAL,
+		 Keyword::UNSAFE_INLINE,
+	    ])
             ->addDirective(Directive::STYLE, [
-                'self',
-                'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=',
-                'sha256-SdHSyVDPvQg1yn/bYnVWQS6ia0WFKQebbnKVl/BvFQI=',
-                'sha256-ja0z+lPRcUPYhi+sdtJJEKlXmCMywxJtCLxCQzKd2K0=',
-                'sha256-/mau8oeIz2YLI4P++2nDYKPBJi8XruHTrqfN5b3JFMA=',
-                'sha256-izSW/CnR2rAHp5hWH5wL1h81efEPSDMbJJsjRuQ3CL4=',
+                Keyword::SELF,
+		Keyword::UNSAFE_INLINE,
             ]);
     }
 
@@ -60,6 +61,7 @@ class Csp extends Policy
             'data:',
         ])
             ->addDirective(Directive::STYLE, 'fonts.googleapis.com');
+	return $this;
     }
 
     /**
@@ -68,5 +70,6 @@ class Csp extends Policy
     private function addGravatarPolicies()
     {
         $this->addDirective(Directive::IMG, '*.gravatar.com');
+	return $this;
     }
 }
