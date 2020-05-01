@@ -17,7 +17,3 @@ hljs.registerLanguage('php', php);
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('bash', bash);
 hljs.initHighlightingOnLoad();
-
-const turbolinks = require('turbolinks');
-
-turbolinks.start();

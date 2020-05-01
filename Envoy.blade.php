@@ -5,8 +5,9 @@
     php artisan down
     git stash
     git pull
-    yarn
-    yarn prod
+    npm install
+    npm run prod
+    php artisan optimize
     php artisan up
 @endtask
 
