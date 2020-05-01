@@ -15,7 +15,7 @@
     "mazedlx/laravel-feature-policy": "^1.0.8",
     "nothingworks/blade-svg": "^0.3.2",
     "spatie/laravel-csp": "^2.4",
-    "spatie/laravel-responsecache": "^6.3",
+    "spatie/laravel-responsecache": "^6.2",
     "spatie/yaml-front-matter": "^2.0"
   },
   "require-dev": {
