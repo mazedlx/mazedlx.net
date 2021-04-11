@@ -13,10 +13,8 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Source+Code+Pro|Spectral" rel="stylesheet">
-    
+
         <!-- Scripts -->
-    <script defer src="{{ mix('js/manifest.js') }}"></script>
-    <script defer src="{{ mix('js/vendor.js') }}"></script>
     <script defer src="{{ mix('js/app.js') }}"></script>
 </head>
 <body>

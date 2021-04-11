@@ -66,7 +66,7 @@ class Post
                     'summary' => markdown($document->summary ?? ''),
                     'summary_short' => mb_strimwidth($document->summary ?? $document->body(), 0, 140, "..."),
                     'preview_image' => $document->preview_image ? env('APP_URL') . $document->preview_image : 'some-preview-image.png',
-                    'published' => $document->published ?? true,
+                    'published' => $document->published === 'no' ? false : true,
                     'tags' => $document->tags != '' ? collect(explode(', ', $document->tags)) : null,
                 ];
             })

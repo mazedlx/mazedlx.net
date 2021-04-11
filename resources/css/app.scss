@@ -4,11 +4,15 @@
 
 @tailwind utilities;
 
+a {
+    @apply underline;
+}
+
 pre {
     @apply m-4 shadow-lg;
 }
 
-p > code, 
+p > code,
 ul > li > code {
     @apply px-1 bg-gray-300 text-gray-700 font-mono;
 }
