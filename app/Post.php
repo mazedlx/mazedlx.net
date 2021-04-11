@@ -2,13 +2,12 @@
 
 namespace App;
 
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
-use Spatie\YamlFrontMatter\YamlFrontMatter;
-use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Str;
+use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 class Post
 {
@@ -23,10 +22,8 @@ class Post
     {
         return $this->all()
             ->first(function ($post) use ($year, $month, $day, $slug) {
-                return $post->date->year == $year &&
-                    $post->date->month == $month &&
-                    $post->date->day == $day &&
-                    $post->slug == $slug;
+                return $post->date->format('Y-m-d') === implode('-', [$year, $month, $day])
+                    && $post->slug === $slug;
             }, function () {
                 abort(404);
             });
@@ -63,18 +60,17 @@ class Post
                     'title' => $document->title,
                     'category' => $document->category ?? 'general',
                     'contents' => markdown($document->body()),
+                    'markdown' => $document->body(),
                     'summary' => markdown($document->summary ?? ''),
-                    'summary_short' => mb_strimwidth($document->summary ?? $document->body(), 0, 140, "..."),
+                    'summary_short' => mb_strimwidth($document->summary ?? $document->body(), 0, 140, '...'),
                     'preview_image' => $document->preview_image ? config('app.url')
                         . $document->preview_image : 'some-preview-image.png',
-                    'published' => $document->published === 'no' ? false : true,
-                    'tags' => $document->tags != '' ? collect(explode(', ', $document->tags)) : null,
+                    'published' => 'no' !== $document->published,
+                    'tags' => '' !== $document->tags ? collect(explode(', ', $document->tags)) : null,
                 ];
-            })
-            ->filter(function ($post) {
+            })->filter(function ($post) {
                 return $post->published;
-            })
-            ->sortByDesc('date');
+            })->sortByDesc('date');
     }
 
     public function paginate($perPage)

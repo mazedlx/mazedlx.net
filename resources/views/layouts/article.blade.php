@@ -1,12 +1,12 @@
-<article class="bg-gray-100 p-8">
-    <h1 class="font-bold text-2xl hover:underline font-serif">
+<article class="p-8 bg-gray-100">
+    <h1 class="text-3xl font-bold prose hover:underline">
         <a class="" href="{{ $post->url }}">
             {{ $post->title}}
         </a>
     </h1>
 
-    <div class="font-sans text-gray-500 pb-2">{{$post->date->diffForHumans() }}</div>
-    <div class="font-sans text-gray-900 pb-2">{!! $post->summary !!}</div>
+    <div class="pb-2 prose text-gray-500">{{$post->date->diffForHumans() }}</div>
+    <div class="pb-2 prose text-gray-900">{!! $post->summary !!}</div>
 
     @include('layouts.tags')
 </article>
