@@ -6,10 +6,10 @@
     git stash
     git pull
     composer install --no-dev
-    composer update --no-dev
     npm install
     npm run prod
     php artisan optimize
+    php artisan responsecache:clear
     php artisan up
 @endtask
 
@@ -17,4 +17,5 @@
     cd /var/www/html/blog
     git stash
     git pull
+    php artisan responsecache:clear
 @endtask
