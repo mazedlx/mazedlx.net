@@ -8,5 +8,4 @@ mix
     postCss: [tailwindcss()],
   })
   .js('resources/js/app.js', 'public/js')
-  //.extract()
   .version();
