@@ -2,14 +2,13 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Storage;
+use Tests\TestCase;
 
 class PostTest extends TestCase
 {
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -61,7 +60,7 @@ class PostTest extends TestCase
         ]);
 
         Storage::disk('posts')->assertExists('2018-03-24.some-title.md');
-        $this->assertEquals(
+        $this->assertSame(
             file_get_contents(base_path('tests/__fixtures__/new-post.md')),
             Storage::disk('posts')->get('2018-03-24.some-title.md')
         );
