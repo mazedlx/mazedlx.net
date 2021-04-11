@@ -17,8 +17,12 @@
         <!-- Scripts -->
     <script defer src="{{ mix('js/app.js') }}"></script>
 </head>
-<body>
-    <div id="app" class="w-full bg-gray-100">
+<body class="antialiased bg-gray-50">
+    <div id="app" class="w-full">
+        <div class="w-full px-4 py-2 mx-auto lg:w-1/2">
+            <x-navigation />
+        </div>
+
         @yield('content')
     </div>
 </body>

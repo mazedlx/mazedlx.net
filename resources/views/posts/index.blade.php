@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="flex md:flex-row flex-col-reverse">
-    <div class="w-full md:w-2/3 lg:w-3/4 xl:w-4/5">
+<div class="flex flex-col-reverse md:flex-row">
+    <div class="w-full mx-auto md:w-1/2">
         @each('layouts.article', $posts, 'post')
 
         {{ $posts->links('layouts.pagination') }}
     </div>
+
     @include('layouts.side')
 </div>
 @stop
