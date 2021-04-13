@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@push('og')
+    {!! $og !!}
+@endpush
+
 @section('content')
 <div class="flex flex-col-reverse md:flex-row">
     <div class="w-full mx-auto md:w-1/2">

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Astrotomic\OpenGraph\OpenGraph;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
@@ -50,8 +51,13 @@ class Post
                 [$date, $slug, $extension] = explode('.', $filename, 3);
                 $date = Carbon::createFromFormat('Y-m-d', $date);
                 $document = YamlFrontMatter::parse(Storage::disk('posts')->get($path));
+                $og = OpenGraph::website('blog.mazedlx.net')
+                    ->url(config('app.url'))
+                    ->description('blog.mazedlx.net')
+                    ->image(config('app.url') . '/img/background.jpg');
 
                 return (object) [
+                    'og' => $og,
                     'path' => $path,
                     'date' => $date,
                     'slug' => $slug,

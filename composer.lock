@@ -4,8 +4,140 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04abb9e3f12512e4125d4e0d4013f9e8",
+    "content-hash": "752816c3d1a72586be54a470ad4de55e",
     "packages": [
+        {
+            "name": "astrotomic/php-conditional-proxy",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Astrotomic/php-conditional-proxy.git",
+                "reference": "311f56d03ead00eed89b4a3afcf1901521ffd343"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Astrotomic/php-conditional-proxy/zipball/311f56d03ead00eed89b4a3afcf1901521ffd343",
+                "reference": "311f56d03ead00eed89b4a3afcf1901521ffd343",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "pestphp/pest": "^0.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Astrotomic\\ConditionalProxy\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Witkowski",
+                    "email": "gummibeer@astrotomic.info",
+                    "homepage": "https://astrotomic.info",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This package provides a trait and class to allow calling methods based on a condition without breaking the method chain.",
+            "homepage": "https://github.com/Astrotomic/php-conditional-proxy",
+            "keywords": [
+                "conditional-proxy",
+                "proxy"
+            ],
+            "support": {
+                "issues": "https://github.com/Astrotomic/php-conditional-proxy/issues",
+                "source": "https://github.com/Astrotomic/php-conditional-proxy/tree/0.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://offset.earth/treeware",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/Gummibeer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://issuehunt.io/r/astrotomic",
+                    "type": "issuehunt"
+                }
+            ],
+            "time": "2021-01-04T15:25:20+00:00"
+        },
+        {
+            "name": "astrotomic/php-open-graph",
+            "version": "0.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Astrotomic/php-open-graph.git",
+                "reference": "6851eba98380103e6f35c20677af83320c5e0699"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Astrotomic/php-open-graph/zipball/6851eba98380103e6f35c20677af83320c5e0699",
+                "reference": "6851eba98380103e6f35c20677af83320c5e0699",
+                "shasum": ""
+            },
+            "require": {
+                "astrotomic/php-conditional-proxy": "^0.2.1",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "pestphp/pest": "^0.3.0",
+                "spatie/pest-plugin-snapshots": "^0.3.0"
+            },
+            "suggest": {
+                "php": "^7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Astrotomic\\OpenGraph\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Witkowski",
+                    "email": "gummibeer@astrotomic.info",
+                    "homepage": "https://astrotomic.info",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily generate Open Graph tags",
+            "homepage": "https://github.com/Astrotomic/php-open-graph",
+            "keywords": [
+                "open-graph"
+            ],
+            "support": {
+                "issues": "https://github.com/Astrotomic/php-open-graph/issues",
+                "source": "https://github.com/Astrotomic/php-open-graph/tree/0.5.2"
+            },
+            "funding": [
+                {
+                    "url": "https://offset.earth/treeware",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/Gummibeer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://issuehunt.io/r/astrotomic",
+                    "type": "issuehunt"
+                }
+            ],
+            "time": "2021-01-04T15:30:05+00:00"
+        },
         {
             "name": "blade-ui-kit/blade-heroicons",
             "version": "1.0.1",
