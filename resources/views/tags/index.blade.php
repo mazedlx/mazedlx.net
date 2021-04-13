@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+{{ config('app.name') }}
+@endsection
+
 @push('og')
     {!! $og !!}
 @endpush
