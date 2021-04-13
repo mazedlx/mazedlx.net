@@ -54,7 +54,7 @@ class Post
                 $og = OpenGraph::article($document->summary)
                     ->title($document->title)
                     ->url(route('posts.show', [$date->format('Y'), $date->format('m'), $date->format('d'), $slug]))
-                    ->description('blog.mazedlx.net')
+                    ->description($document->summary)
                     ->image(config('app.url') . '/img/background.jpg');
 
                 return (object) [
