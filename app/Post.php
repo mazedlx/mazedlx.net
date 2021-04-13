@@ -51,7 +51,8 @@ class Post
                 [$date, $slug, $extension] = explode('.', $filename, 3);
                 $date = Carbon::createFromFormat('Y-m-d', $date);
                 $document = YamlFrontMatter::parse(Storage::disk('posts')->get($path));
-                $og = OpenGraph::website('blog.mazedlx.net')
+                $og = OpenGraph::article('blog.mazedlx.net')
+                    ->title($document->title)
                     ->url(route('posts.show', [$date->format('Y'), $date->format('m'), $date->format('d'), $slug]))
                     ->description('blog.mazedlx.net')
                     ->image(config('app.url') . '/img/background.jpg');
