@@ -3,6 +3,7 @@
 namespace App;
 
 use Astrotomic\OpenGraph\OpenGraph;
+use Astrotomic\OpenGraph\Twitter;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
@@ -56,9 +57,14 @@ class Post
                     ->url(route('posts.show', [$date->format('Y'), $date->format('m'), $date->format('d'), $slug]))
                     ->description($document->summary)
                     ->image(config('app.url') . '/img/background.jpg');
+                $twitter = Twitter::summary($document->summary)
+                    ->description($document->summary)
+                    ->image(config('app.url') . '/img/background.jpg')
+                    ->site(route('posts.show', [$date->format('Y'), $date->format('m'), $date->format('d'), $slug]));
 
                 return (object) [
                     'og' => $og,
+                    'twitter' => $twitter,
                     'path' => $path,
                     'date' => $date,
                     'slug' => $slug,

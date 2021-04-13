@@ -6,6 +6,8 @@
 
 @push('og')
 {!! $post->og !!}
+
+{!! $post->twitter !!}
 @endpush
 
 @section('content')

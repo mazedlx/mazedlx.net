@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Astrotomic\OpenGraph\OpenGraph;
+use Astrotomic\OpenGraph\Twitter;
 
 class PostController extends Controller
 {
@@ -14,8 +15,14 @@ class PostController extends Controller
                     ->description('blog.mazedlx.net')
                     ->image(config('app.url') . '/img/background.jpg');
 
+        $twitter = Twitter::summary('blog.mazedlx.net')
+            ->description('blog.mazedlx.net')
+            ->image(config('app.url') . '/img/background.jpg')
+            ->site(config('app.url'));
+
         return view('posts.index', [
             'og' => $og,
+            'twitter' => $twitter,
             'posts' => $posts->paginate(5),
         ]);
     }

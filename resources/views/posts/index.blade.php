@@ -2,6 +2,8 @@
 
 @push('og')
     {!! $og !!}
+
+    {!! $twitter !!}
 @endpush
 
 @section('content')
