@@ -17,7 +17,7 @@
 
         <div class="pb-2 text-gray-500">{{$post->date->diffForHumans() }}</div>
 
-        <x-markdown class="prose">{!! $post->markdown !!}</x-markdown>
+        <x-markdown class="prose-lg">{!! $post->markdown !!}</x-markdown>
 
         @include('layouts.tags')
     </div>
