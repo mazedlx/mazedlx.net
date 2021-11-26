@@ -55,10 +55,10 @@ class Post
                 $og = OpenGraph::article($document->summary)
                     ->title($document->title)
                     ->url(route('posts.show', [$date->format('Y'), $date->format('m'), $date->format('d'), $slug]))
-                    ->description($document->summary)
+                    ->description($document->summary ?? '')
                     ->image(config('app.url') . '/img/background.jpg');
                 $twitter = Twitter::summary($document->summary)
-                    ->description($document->summary)
+                    ->description($document->summary ?? '')
                     ->image(config('app.url') . '/img/background.jpg')
                     ->site(route('posts.show', [$date->format('Y'), $date->format('m'), $date->format('d'), $slug]));
 

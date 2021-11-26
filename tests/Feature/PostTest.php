@@ -42,6 +42,7 @@ class PostTest extends TestCase
     /** @test */
     public function it_retrieves_only_published_posts()
     {
+        $this->withExceptionHandling();
         Storage::disk('posts')->put('2018-02-22.unpublished.md', file_get_contents(base_path('tests/__fixtures__/unpublished-post.md')));
         Storage::disk('posts')->assertExists('2018-02-22.unpublished.md');
 
