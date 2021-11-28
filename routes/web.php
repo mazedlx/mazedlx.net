@@ -18,5 +18,5 @@ Route::post('subscribe', SubscribeController::class)->name('subscribe');
 Route::get('subscribe/{token}', ConfirmController::class)->name('confirm');
 Route::get('unsubscribe/{token}', UnsubscribeController::class)->name('unsubscribe');
 Route::view('subscribed', 'subscribed')->name('subscribed');
-Route::view('thankyou', 'thankyou')->name('thankyou');
+Route::view('thank-you', 'thank-you')->name('thank-you');
 Route::view('bye', 'bye')->name('bye');

@@ -5,8 +5,6 @@ namespace Tests\Feature;
 use App\Mail\ConfirmSubscription;
 use App\Subscriber;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 
@@ -62,7 +60,7 @@ class SubscriberTest extends TestCase
 
         $response = $this->get(route('confirm', ['token' => 'asdfghjk']));
 
-        $response->assertRedirect(route('thankyou'));
+        $response->assertRedirect(route('thank-you'));
         $this->assertNotNull($subscriber->fresh()->confirmed_at);
     }
 

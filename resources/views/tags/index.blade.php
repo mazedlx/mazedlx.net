@@ -33,6 +33,5 @@
         </div>
     @endforeach
     </div>
-    @include('layouts.side')
 </div>
 @endsection
