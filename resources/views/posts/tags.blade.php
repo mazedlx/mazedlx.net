@@ -8,4 +8,4 @@
 
     @include('layouts.side')
 </div>
-@stop
+@endsection

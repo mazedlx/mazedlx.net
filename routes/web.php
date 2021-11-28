@@ -13,6 +13,7 @@ Route::get('{year}/{month}/{day}/{slug}', [PostController::class, 'show'])->name
 Route::get('tags', [TagController::class, 'index'])->name('tags.index');
 Route::get('tags/{tag}', [TagController::class, 'show'])->name('tags.show');
 
+Route::view('sign-up', 'sign-up')->name('sign-up');
 Route::post('subscribe', SubscribeController::class)->name('subscribe');
 Route::get('subscribe/{token}', ConfirmController::class)->name('confirm');
 Route::get('unsubscribe/{token}', UnsubscribeController::class)->name('unsubscribe');

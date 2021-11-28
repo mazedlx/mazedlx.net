@@ -14,10 +14,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Source+Code+Pro|Spectral" rel="stylesheet">
-
-        <!-- Scripts -->
-    <script defer src="{{ mix('js/app.js') }}"></script>
+    @livewireStyles
 </head>
 <body class="antialiased bg-gray-50">
     <div id="app" class="w-full">
@@ -25,5 +22,7 @@
 
         @yield('content')
     </div>
+    @livewireScripts
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

@@ -3,3 +3,5 @@
 @tailwind utilities;
 
 @import '~highlight.js/styles/rainbow.css';
+
+[x-cloak] { display: none !important; }

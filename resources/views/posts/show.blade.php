@@ -22,4 +22,4 @@
         @include('layouts.tags')
     </div>
 </div>
-@stop
+@endsection
