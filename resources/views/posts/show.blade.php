@@ -11,15 +11,24 @@
 @endpush
 
 @section('content')
-<div class="flex flex-col md:flex-row">
-    <div class="w-full px-4 py-2 mx-auto lg:w-1/2">
-        <h1 class="text-5xl font-bold prose">{{ $post->title }}</h1>
+<div class="flex flex-col-reverse md:flex-row">
+    <div class="w-full mx-auto md:w-1/2">
+        <div class="px-4 pt-16 pb-20 bg-white sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+            <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
+                <article class="prose lg:prose-xl">
+                    <h1>{{ $post->title }}</h1>
 
-        <div class="pb-2 text-gray-500">{{$post->date->diffForHumans() }}</div>
+                    <time date="{{ $post->date->format('Y-m-d') }}">
+                        {{ $post->date->diffForHumans() }}
+                    </time>
 
-        <x-markdown class="prose-lg">{!! $post->markdown !!}</x-markdown>
-
-        @include('layouts.tags')
+                    <p>{!! $post->contents !!}</p>
+                </article>
+            </div>
+            <div class="flex items-center">
+                <span class="mr-1">Tagged with:</span> @include('layouts.tags')
+            </div>
+        </div>
     </div>
 </div>
 @endsection

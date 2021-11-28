@@ -1,6 +1,6 @@
 <article>
     <div>
-        <div href="{{ $post->url }}" class="inline-block">
+        <div class="inline-block">
             @include('layouts.tags')
         </div>
     </div>
@@ -23,7 +23,7 @@
                     &middot;
                 </span>
                 <span>
-
+                    {{ $post->read_time }} min read
                 </span>
             </div>
         </div>

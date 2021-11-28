@@ -13,6 +13,8 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 class Post
 {
+    public const WORDS_PER_MINUTE = 200;
+
     public function all()
     {
         return $posts = Cache::get('posts.all', function () {
@@ -80,6 +82,7 @@ class Post
                         . $document->preview_image : 'some-preview-image.png',
                     'published' => 'no' !== $document->published,
                     'tags' => '' !== $document->tags ? collect(explode(', ', $document->tags)) : null,
+                    'read_time' => ceil(str_word_count($document->body()) / self::WORDS_PER_MINUTE),
                 ];
             })->filter(function ($post) {
                 return $post->published;
