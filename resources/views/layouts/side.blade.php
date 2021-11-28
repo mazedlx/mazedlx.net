@@ -3,6 +3,30 @@
         <a class="text-3xl font-medium text-white underline cursor:pointer hover:text-gray-900" href="/">
             blog.mazedlx.net
         </a>
+
+        <form
+            action="{{ route('subscribe') }}"
+            method="POST"
+            class="flex flex-col mt-2 space-y-2"
+        >
+            @csrf
+            <span class="prose text-white">Subscribe to the CodeIgniter to Laravel newsletter. I'll send you regular updates on my progress. You can cancel anytime!</span>
+            <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                value="{{ old('email') }}"
+                placeholder="your email"
+                class="p-2 placeholder-gray-500 rounded-lg"
+            >
+            @error('email')
+                <span class="font-bold text-white">{{ $message }}</span>
+            @enderror
+            <button
+                type="submit"
+                class="p-2 text-xl font-bold text-white border-2 border-white rounded-lg hover:bg-white hover:text-gray-600"
+            >Hook me up!</button>
+        </form>
     </div>
 
     <div class="md:border-b-2 md:border-white"></div>
