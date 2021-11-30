@@ -14,11 +14,11 @@
                         Home
                     </a>
 
-                    <a href="#" class="text-base font-medium text-white hover:text-green-50" key="Talks">
+                    <a href="{{ route('talks') }}" class="text-base font-medium text-white hover:text-green-50" key="Talks">
                         Talks
                     </a>
 
-                    <a href="#" class="text-base font-medium text-white hover:text-green-50" key="About">
+                    <a href="{{ route('about') }}" class="text-base font-medium text-white hover:text-green-50" key="About">
                         About
                     </a>
                 </div>

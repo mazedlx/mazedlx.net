@@ -20,3 +20,5 @@ Route::get('unsubscribe/{token}', UnsubscribeController::class)->name('unsubscri
 Route::view('subscribed', 'subscribed')->name('subscribed');
 Route::view('thank-you', 'thank-you')->name('thank-you');
 Route::view('bye', 'bye')->name('bye');
+Route::view('talks', 'talks')->name('talks');
+Route::view('about', 'about')->name('about');
