@@ -12,6 +12,6 @@ class ConfirmController extends Controller
         $subscriber = Subscriber::where('token', $token)->firstOrFail();
         $subscriber->confirm();
 
-        return \redirect(route('thankyou'));
+        return \redirect(route('thank-you'));
     }
 }
