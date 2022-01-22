@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w-1/3 mx-auto bg-white rounded-b-lg shadow">
+<div class="w-full mx-auto bg-white rounded-b-lg shadow md:w-1/2">
     <div class="bg-white shadow sm:rounded-lg">
         <div class="px-4 py-5 sm:p-6">
             <h3 class="text-lg font-medium leading-6 text-gray-900">
