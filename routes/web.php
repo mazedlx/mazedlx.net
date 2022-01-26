@@ -31,3 +31,5 @@ Route::view('talks', 'talks')->name('talks');
 Route::view('about', 'about')->name('about');
 
 Route::view('work', 'work')->name('work');
+
+Route::view('uses', 'uses')->name('uses');
