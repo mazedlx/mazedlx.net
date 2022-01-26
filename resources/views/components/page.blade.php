@@ -4,6 +4,7 @@
             <div class="relative max-w-lg mx-auto space-y-6 lg:max-w-7xl">
                 {{ $slot }}
             </div>
+            <x-footer />
         </div>
     </div>
 </div>
