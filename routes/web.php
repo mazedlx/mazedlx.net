@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ConfirmController;
+use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\TagController;
@@ -20,5 +21,13 @@ Route::get('unsubscribe/{token}', UnsubscribeController::class)->name('unsubscri
 Route::view('subscribed', 'subscribed')->name('subscribed');
 Route::view('thank-you', 'thank-you')->name('thank-you');
 Route::view('bye', 'bye')->name('bye');
+
+Route::view('contact', 'contact')->name('contact');
+Route::post('contact', ContactFormController::class)->name('send');
+Route::view('sent', 'sent')->name('sent');
+
 Route::view('talks', 'talks')->name('talks');
+
 Route::view('about', 'about')->name('about');
+
+Route::view('work', 'work')->name('work');

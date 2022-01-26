@@ -4,11 +4,11 @@
             @include('layouts.tags')
         </div>
     </div>
-    <a href="{{ $post->url }}" class="block mt-4">
-        <p class="text-xl font-semibold text-gray-900">
+    <a href="{{ $post->url }}" class="block mt-4 prose">
+        <h2>
             {{ $post->title}}
-        </p>
-        <p class="mt-3 text-base text-gray-500">
+        </h2>
+        <p>
             {!! $post->summary !!}
         </p>
     </a>
