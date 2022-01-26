@@ -1,7 +1,7 @@
 @servers(['web' => 'mazedlx.net'])
 
 @task('deploy', ['on' => 'web'])
-    cd /var/www/html/blog
+    cd /var/www/html/mazedlx.net
     php artisan down
     git stash
     git pull
@@ -12,7 +12,7 @@
 @endtask
 
 @task('posts', ['on' => 'web'])
-    cd /var/www/html/blog
+    cd /var/www/html/mazedlx.net
     git stash
     git pull
     php artisan responsecache:clear
