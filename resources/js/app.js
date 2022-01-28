@@ -12,4 +12,5 @@ hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('php', php);
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('bash', bash);
+hljs.registerLanguage('diff', diff);
 hljs.highlightAll();
