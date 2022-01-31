@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '~highlight.js/styles/rainbow.css';
+@import '~highlight.js/styles/monokai.css';
 
 [x-cloak] { display: none !important; }
