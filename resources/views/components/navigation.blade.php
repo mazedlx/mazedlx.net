@@ -6,7 +6,7 @@
             <div class="flex items-center">
                 <a href="{{ route('posts.index') }}" class="hidden lg:block">
                     <span class="sr-only">Home</span>
-                    <x-bi-keyboard class="w-10 h-10 text-white" />
+                    <x-zondicon-keyboard class="w-10 h-10 text-white" />
                 </a>
 
                 <div class="ml-10 space-x-8">
