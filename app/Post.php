@@ -9,6 +9,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use League\CommonMark\CommonMarkConverter;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 class Post
@@ -97,5 +98,12 @@ class Post
         });
 
         return new LengthAwarePaginator($items, $this->all()->count(), $perPage);
+    }
+
+    public function markdown($markdown)
+    {
+        $converter = new CommonMarkConverter();
+
+        return $converter->convert($markdown);
     }
 }
