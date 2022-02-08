@@ -75,9 +75,9 @@ class Post
                     'external_url' => $document->external_url ?? false,
                     'title' => $document->title,
                     'category' => $document->category ?? 'general',
-                    'contents' => markdown($document->body()),
+                    'contents' => $this->markdown($document->body()),
                     'markdown' => $document->body(),
-                    'summary' => markdown($document->summary ?? ''),
+                    'summary' => $this->markdown($document->summary ?? ''),
                     'summary_short' => mb_strimwidth($document->summary ?? $document->body(), 0, 140, '...'),
                     'preview_image' => $document->preview_image ? config('app.url')
                         . $document->preview_image : 'some-preview-image.png',
