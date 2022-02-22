@@ -7,7 +7,7 @@
         <p>
             Are you ready to kick off your next project with us? Great! Please fill out the following form or contact us directly at <a href="tel:+436604563193">+43 660 4563193</a> or drop us an email at <a href="mailto:mazedlx@gmail.com">mazedlx@gmail.com</a>
         </p>
-        <form action="" method="POST">
+        <form action="{{ route('send') }}" method="POST">
             @csrf
             <div>
                 <label for="name" class="sr-only">
@@ -36,17 +36,20 @@
                 </div>
             </div>
 
+            <div class="hidden space-y-1">
+                <label for="spam_protection">
+                    Leave this empty, will you?
+                </label>
+                <div class="mt-1">
+                    <input id="spam_protection" name="spam_protection" type="text" class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+            </div>
+
             <div class="flex w-full mt-1 sm:justify-end">
                 <button type="submit" class="inline-flex items-center justify-center w-full px-4 py-2 mt-3 font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm">
                     Send message
                 </button>
             </div>
-
-            <input
-                type="text"
-                name="spam_protection"
-                class="hidden"
-            >
         </form>
     </div>
 </x-page>
