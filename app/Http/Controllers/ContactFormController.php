@@ -14,7 +14,6 @@ class ContactFormController extends Controller
         if (null !== request('check_that')) {
             return redirect(route('posts.index'));
         }
-
         if (time() - request('timestamp') < 5) {
             return redirect(route('posts.index'));
         }

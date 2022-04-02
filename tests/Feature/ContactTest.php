@@ -21,6 +21,7 @@ class ContactTest extends TestCase
             'email' => 'bob@example.com',
             'message' => 'Yo, what up dog! This should be longer than 30 characters.',
             'check_that' => '',
+            'timestamp' => time() - 5,
         ], $overrides);
     }
 
@@ -82,6 +83,16 @@ class ContactTest extends TestCase
     {
         $response = $this->post(route('contact'), $this->validParams([
             'check_that' => 'not-empty',
+        ]));
+
+        Mail::assertSent(ContactMail::class, 0);
+    }
+
+    /** @test */
+    public function timestamp_must_be_4_seconds_or_farther_in_the_past()
+    {
+        $response = $this->post(route('contact'), $this->validParams([
+            'timestamp' => time() - 4,
         ]));
 
         Mail::assertSent(ContactMail::class, 0);
