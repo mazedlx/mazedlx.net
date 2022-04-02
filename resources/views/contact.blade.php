@@ -73,6 +73,12 @@
                     </div>
                 </div>
 
+                <input
+                    type="hidden"
+                    name="timestamp"
+                    value="{{ microtime(true) }}"
+                >
+
                 <div class="hidden space-y-1">
                     <div class="mt-1">
                         <input

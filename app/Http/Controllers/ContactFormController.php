@@ -15,6 +15,10 @@ class ContactFormController extends Controller
             return redirect(route('posts.index'));
         }
 
+        if (microtime(true) - request('timestamp') < 5) {
+            return redirect(route('posts.index'));
+        }
+
         Mail::send(new ContactMail(request()->validate([
             'name' => 'required',
             'email' => 'required|email',
