@@ -11,7 +11,7 @@
                 >mazedlx@gmail.com</a>
             </p>
             <form
-                action=""
+                action="{{ route('send') }}"
                 method="POST"
             >
                 @csrf
@@ -57,7 +57,7 @@
 
                 <div class="space-y-1">
                     <label
-                        for="password"
+                        for="message"
                         class="sr-only"
                     >
                         Your fantastic idea that needs realization
@@ -73,6 +73,17 @@
                     </div>
                 </div>
 
+                <div class="hidden space-y-1">
+                    <div class="mt-1">
+                        <input
+                            id="check_that"
+                            name="check_that"
+                            type="text"
+                            class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        >
+                    </div>
+                </div>
+
                 <div class="flex w-full mt-1 sm:justify-end">
                     <button
                         type="submit"
@@ -81,12 +92,6 @@
                         Send message
                     </button>
                 </div>
-
-                <input
-                    type="text"
-                    name="check_that"
-                    class="hidden"
-                >
             </form>
         </div>
     </x-page>
