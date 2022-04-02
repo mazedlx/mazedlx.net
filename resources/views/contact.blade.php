@@ -76,7 +76,7 @@
                 <input
                     type="hidden"
                     name="timestamp"
-                    value="{{ microtime(true) }}"
+                    value="{{ time() }}"
                 >
 
                 <div class="hidden space-y-1">

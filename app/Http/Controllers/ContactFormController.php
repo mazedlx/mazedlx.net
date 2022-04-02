@@ -15,7 +15,7 @@ class ContactFormController extends Controller
             return redirect(route('posts.index'));
         }
 
-        if (microtime(true) - request('timestamp') < 5) {
+        if (time() - request('timestamp') < 5) {
             return redirect(route('posts.index'));
         }
 
