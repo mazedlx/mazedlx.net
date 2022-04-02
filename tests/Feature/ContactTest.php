@@ -20,7 +20,7 @@ class ContactTest extends TestCase
             'name' => 'Bob Doe',
             'email' => 'bob@example.com',
             'message' => 'Yo, what up dog! This should be longer than 30 characters.',
-            'spam_protection' => '',
+            'check_that' => '',
         ], $overrides);
     }
 
@@ -78,10 +78,10 @@ class ContactTest extends TestCase
     }
 
     /** @test */
-    public function spam_protection_must_be_empty()
+    public function check_that_must_be_empty()
     {
         $response = $this->post(route('contact'), $this->validParams([
-            'spam_protection' => 'not-empty',
+            'check_that' => 'not-empty',
         ]));
 
         Mail::assertSent(ContactMail::class, 0);
