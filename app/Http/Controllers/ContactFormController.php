@@ -11,7 +11,7 @@ class ContactFormController extends Controller
 {
     public function __invoke(Request $request): RedirectResponse
     {
-        if (null !== request('check_that')) {
+        if ('spam' !== request('check_that')) {
             return redirect(route('posts.index'));
         }
         if (time() - request('timestamp') < 5) {

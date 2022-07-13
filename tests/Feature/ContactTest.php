@@ -20,7 +20,7 @@ class ContactTest extends TestCase
             'name' => 'Bob Doe',
             'email' => 'bob@example.com',
             'message' => 'Yo, what up dog! This should be longer than 30 characters.',
-            'check_that' => '',
+            'check_that' => 'spam',
             'timestamp' => time() - 5,
         ], $overrides);
     }
@@ -79,10 +79,20 @@ class ContactTest extends TestCase
     }
 
     /** @test */
-    public function check_that_must_be_empty()
+    public function check_that_must_be_spam()
     {
         $response = $this->post(route('contact'), $this->validParams([
-            'check_that' => 'not-empty',
+            'check_that' => 'spam',
+        ]));
+
+        Mail::assertSent(ContactMail::class, 1);
+    }
+
+    /** @test */
+    public function check_that_must_not_be_anything_else()
+    {
+        $response = $this->post(route('contact'), $this->validParams([
+            'check_that' => 'anything else',
         ]));
 
         Mail::assertSent(ContactMail::class, 0);
