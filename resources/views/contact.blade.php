@@ -85,7 +85,7 @@
                             for="check_that"
                             class="sr-only"
                         >
-                            Fight spam and leave this field blank
+                            Fight spam and enter spam
                         </label>
                         <input
                             id="check_that"
