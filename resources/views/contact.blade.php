@@ -5,8 +5,8 @@
         <div class="prose">
             <h1>Contact</h1>
             <p>
-                Are you ready to kick off your next project with us? Great! Please fill out the following form or contact us
-                directly at <a href="tel:+436604563193">+43 660 4563193</a> or drop us an email at <a
+                Are you ready to kick off your next project with me? Great! Please fill out the following form or contact me
+                directly at <a href="tel:+436604563193">+43 660 4563193</a> or drop me an email at <a
                     href="mailto:mazedlx@gmail.com"
                 >mazedlx@gmail.com</a>
             </p>
