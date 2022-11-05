@@ -16,7 +16,7 @@
     <a
         rel="me"
         href="https://wien.rocks/@mazedlx"
-    ></a>
+    >Mastodon</a>
     <title>@yield('title')</title>
 
     <!-- CSRF Token -->
