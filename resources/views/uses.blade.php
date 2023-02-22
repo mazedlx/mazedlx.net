@@ -42,6 +42,7 @@
                     </ul>
                 </li>
                 <li><a href="https://tinkerwell.app/">Tinkerwell</a></li>
+                <li><a href="https://phpmon.app/">PHP Monitor</a></li>
                 <li><a href="https://www.warp.dev/">Warp</a></li>
                 <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
                 <li><a href="https://www.sublimemerge.com/">Sublime Merge</a></li>

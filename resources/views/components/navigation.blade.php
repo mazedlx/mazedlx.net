@@ -12,7 +12,8 @@
                     class="hidden lg:block"
                 >
                     <span class="sr-only">Home</span>
-                    <x-zondicon-keyboard class="w-10 h-10 text-white" />
+                    <x-codicon-record-keys class="w-10 h-10 text-white" />
+
                 </a>
 
                 <div class="ml-10 space-x-8">
