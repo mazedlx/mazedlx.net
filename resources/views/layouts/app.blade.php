@@ -24,12 +24,7 @@
         name="csrf-token"
         content="{{ csrf_token() }}"
     >
-
-    <!-- Styles -->
-    <link
-        href="{{ mix('css/app.css') }}"
-        rel="stylesheet"
-    >
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
 
@@ -43,7 +38,6 @@
         @yield('content')
     </div>
     @livewireScripts
-    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 
 </html>
