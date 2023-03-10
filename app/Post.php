@@ -102,7 +102,7 @@ class Post
 
     public function markdown($markdown)
     {
-        $converter = new CommonMarkConverter();
+        $converter = new CommonMarkConverter;
 
         return $converter->convert($markdown);
     }

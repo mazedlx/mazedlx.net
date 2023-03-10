@@ -13,6 +13,6 @@ class UnsubscribeController extends Controller
 
         $subscriber->unsubscribe();
 
-        return \redirect(\route('bye'));
+        return redirect(route('bye'));
     }
 }
