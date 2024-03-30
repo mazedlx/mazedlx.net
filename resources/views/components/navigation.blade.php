@@ -1,5 +1,5 @@
 <header class="bg-gradient-to-tr from-green-400 via-purple-500 to-blue-600">
-    @livewire('banner')
+
 
     <nav
         class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8"
