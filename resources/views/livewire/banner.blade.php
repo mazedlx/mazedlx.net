@@ -2,7 +2,7 @@
     x-cloak
     x-show="open"
     x-data="{
-        open: @entangle('open')
+        open: @entangle('open').live
     }"
     class="relative bg-white"
 >
