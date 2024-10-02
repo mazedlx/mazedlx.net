@@ -16,7 +16,7 @@
         Offenlegungspflicht nach &sect;25 Mediengesetz<br>
         <br>
         DI(FH) Christian Leo-Pernold<br>
-        Glockenblumengasse 36/6/2<br>
+        An der Neurisse 9/Haus 43<br>
         1220 Wien<br>
         <a href="tel:+436604563193">+43 660 456 3193</a><br>
         <a href="mailto:mazedlx@gmail.com">mazedlx@gmail.com</a><br>
