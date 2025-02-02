@@ -1,4 +1,4 @@
-<header class="bg-gradient-to-tr from-green-400 via-purple-500 to-blue-600">
+<header class="bg-linear-to-tr from-green-400 via-purple-500 to-blue-600">
 
 
     <nav
