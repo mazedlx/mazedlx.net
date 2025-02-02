@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@source "../views";
+
 @import '~highlight.js/styles/monokai.css' layer(utilities);
 
 @layer base {
