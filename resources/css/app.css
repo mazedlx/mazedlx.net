@@ -2,16 +2,9 @@
 
 @source "../views";
 
-@import '~highlight.js/styles/monokai.css' layer(utilities);
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
 
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-}
+@import 'highlight.js/styles/monokai.css' layer(utilities);
 
 [x-cloak] { display: none !important; }
