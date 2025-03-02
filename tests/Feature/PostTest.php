@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
+use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 class PostTest extends TestCase
@@ -15,7 +16,7 @@ class PostTest extends TestCase
         Storage::fake('posts');
     }
 
-    /** @test */
+    #[Test]
     public function it_retrieves_all_post()
     {
         Storage::disk('posts')->put('2018-01-17.slug.md', file_get_contents(base_path('tests/__fixtures__/blog-post.md')));
@@ -27,7 +28,7 @@ class PostTest extends TestCase
         $response->assertSee('Some title');
     }
 
-    /** @test */
+    #[Test]
     public function it_retrieves_a_single_post()
     {
         Storage::disk('posts')->put('2018-02-23.this-is-a-slug.md', file_get_contents(base_path('tests/__fixtures__/blog-post.md')));
@@ -39,7 +40,7 @@ class PostTest extends TestCase
         $response->assertSee('Some title');
     }
 
-    /** @test */
+    #[Test]
     public function it_retrieves_only_published_posts()
     {
         $this->withExceptionHandling();
@@ -51,7 +52,7 @@ class PostTest extends TestCase
         $response->assertStatus(404);
     }
 
-    /** @test */
+    #[Test]
     public function it_creates_a_new_post()
     {
         Artisan::call('post:create', [
