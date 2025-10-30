@@ -4,8 +4,15 @@
         <a href="https://github.com/mazedlx">
             <x-codicon-github class="w-6 h-6 text-gray-500 hover:text-indigo-600" />
         </a>
-        <a href="https://twitter.com/mazedlx">
-            <x-codicon-twitter class="w-6 h-6 text-gray-500 hover:text-indigo-600" />
+        <a href="https://wien.rocks/@mazedlx">
+            <x-bi-mastodon class="w-6 h-6 text-gray-500 hover:text-indigo-600" />
         </a>
+        <a href="https://instagram.com/mazedlx">
+            <x-bi-instagram class="w-6 h-6 text-gray-500 hover:text-indigo-600" />
+        </a>
+        <a href="https://bsky.app/profile/mazedlx.bsky.social">
+            <x-bi-bluesky class="w-6 h-6 text-gray-500 hover:text-indigo-600" />
+        </a>
+
     </div>
 </div>
