@@ -1,4 +1,4 @@
-@servers(['web' => 'mazedlx.net'])
+@servers(['web' => 'maze@main.mazedlx.net'])
 
 @task('deploy', ['on' => 'web'])
     cd /var/www/html/mazedlx.net

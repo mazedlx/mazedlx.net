@@ -44,10 +44,10 @@ class CreatePostCommand extends Command
     public function handle()
     {
         $title = $this->argument('title');
-        $slug = strtolower(Str::slug($title));
+        $slug = mb_strtolower(Str::slug($title));
         $options = $this->options();
-        $date = $options['date'] == 'now' ? Carbon::now() : Carbon::createFromFormat('Y-m-d', $options['date']);
-        $published = $options['publish'] == 'yes' ? '' : 'published: no';
+        $date = 'now' === $options['date'] ? Carbon::now() : Carbon::createFromFormat('Y-m-d', $options['date']);
+        $published = 'yes' === $options['publish'] ? '' : 'published: no';
 
         $path = $date->format('Y-m-d') . '.' . $slug . '.md';
 
@@ -56,6 +56,7 @@ class CreatePostCommand extends Command
 
         if (Storage::disk('posts')->exists($path)) {
             $this->error($path . ' already exists!');
+
             return;
         }
         Storage::disk('posts')->put($path, $contents);

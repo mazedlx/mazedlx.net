@@ -6,13 +6,14 @@ use App\Mail\ConfirmSubscription;
 use App\Subscriber;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Mail;
+use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 class SubscriberTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    #[Test]
     public function visitors_can_sign_up()
     {
         $response = $this->post(route('subscribe'), ['email' => 'bob@example.com']);
@@ -26,7 +27,7 @@ class SubscriberTest extends TestCase
         });
     }
 
-    /** @test */
+    #[Test]
     public function emails_must_be_unique()
     {
         Subscriber::factory()->create([
@@ -38,7 +39,7 @@ class SubscriberTest extends TestCase
         $response->assertSessionHasErrors(['email']);
     }
 
-    /** @test */
+    #[Test]
     public function subscribers_receive_an_email()
     {
         Mail::fake();
@@ -50,7 +51,7 @@ class SubscriberTest extends TestCase
         });
     }
 
-    /** @test */
+    #[Test]
     public function subscribers_can_confirm_subscriptions()
     {
         $subscriber = Subscriber::factory()->create([
@@ -64,7 +65,7 @@ class SubscriberTest extends TestCase
         $this->assertNotNull($subscriber->fresh()->confirmed_at);
     }
 
-    /** @test */
+    #[Test]
     public function subscribers_can_unsubscribe()
     {
         $this->withoutExceptionHandling();

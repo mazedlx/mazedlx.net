@@ -6,7 +6,7 @@
     </div>
     <a href="{{ $post->url }}" class="block mt-4 prose">
         <h2>
-            {{ $post->title}}
+            {{ $post->title }}
         </h2>
         <p>
             {!! $post->summary !!}
