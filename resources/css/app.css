@@ -1,7 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@import '~highlight.js/styles/monokai.css';
+@source "../views";
+
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@import 'highlight.js/styles/monokai.css' layer(utilities);
 
 [x-cloak] { display: none !important; }

@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
+use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 class ContactTest extends TestCase
@@ -25,7 +26,7 @@ class ContactTest extends TestCase
         ], $overrides);
     }
 
-    /** @test */
+    #[Test]
     public function an_email_gets_sent_when_the_contact_form_is_submitted()
     {
         $response = $this->post(route('contact'), $this->validParams());
@@ -34,7 +35,7 @@ class ContactTest extends TestCase
         Mail::assertSent(ContactMail::class, 1);
     }
 
-    /** @test */
+    #[Test]
     public function name_is_required()
     {
         $response = $this->post(route('contact'), $this->validParams([
@@ -45,7 +46,7 @@ class ContactTest extends TestCase
         Mail::assertSent(ContactMail::class, 0);
     }
 
-    /** @test */
+    #[Test]
     public function email_is_required()
     {
         $response = $this->post(route('contact'), $this->validParams([
@@ -56,7 +57,7 @@ class ContactTest extends TestCase
         Mail::assertSent(ContactMail::class, 0);
     }
 
-    /** @test */
+    #[Test]
     public function email_must_be_an_email()
     {
         $response = $this->post(route('contact'), $this->validParams([
@@ -67,7 +68,7 @@ class ContactTest extends TestCase
         Mail::assertSent(ContactMail::class, 0);
     }
 
-    /** @test */
+    #[Test]
     public function message_is_required()
     {
         $response = $this->post(route('contact'), $this->validParams([
@@ -78,7 +79,7 @@ class ContactTest extends TestCase
         Mail::assertSent(ContactMail::class, 0);
     }
 
-    /** @test */
+    #[Test]
     public function check_that_must_be_spam()
     {
         $response = $this->post(route('contact'), $this->validParams([
@@ -88,7 +89,7 @@ class ContactTest extends TestCase
         Mail::assertSent(ContactMail::class, 1);
     }
 
-    /** @test */
+    #[Test]
     public function check_that_must_not_be_anything_else()
     {
         $response = $this->post(route('contact'), $this->validParams([
@@ -98,7 +99,7 @@ class ContactTest extends TestCase
         Mail::assertSent(ContactMail::class, 0);
     }
 
-    /** @test */
+    #[Test]
     public function timestamp_must_be_4_seconds_or_farther_in_the_past()
     {
         $response = $this->post(route('contact'), $this->validParams([

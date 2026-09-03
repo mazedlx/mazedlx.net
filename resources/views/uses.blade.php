@@ -9,22 +9,18 @@
 
             <h2>Hardware</h2>
             <ul class="list-none">
-                <li>15" MacBook Pro (2017, 2.9GHz i7, 16GB RAM, 500GB SSD)</li>
-                <li>iPhone 11 Pro Max</li>
-                <li>Beats Studio 3 Wireless</li>
-                <li>AKG K92</li>
-                <li>Apple AirPods 3nd Generation</li>
-                <li>Apple Airpods Pro</li>
-                <li>Beats Powerbeats Pro</li>
+                <li>16" MacBook Pro (M1 Max)</li>
+                <li>iPhone 15 Pro Max</li>
+                <li>Apple AirPods Pro</li>
+                <li>Apple AirPods 4th Generation</li>
+                <li>Apple Airpods Pro 2nd Generation</li>
                 <li>Apple Watch Series 7</li>
                 <li>Røde Podcaster Mic/PSM1 Shock Mount/PSA1 Boom Arm</li>
                 <li>Two Acer B247Y (landscape/portrait mode, Full HD)</li>
                 <li>Anker Apex Thunderbolt 4 Dock</li>
                 <li>rainDesign mStand</li>
-                <li>Steelseries QcK Prism Cloth XL</li>
-                <li>Apple Wireless Keyboard</li>
-                <li>Keychron K3 with lubed banana switches (tactile)</li>
-                <li>Magic Trackpad</li>
+                <li>Logitech G502</li>
+                <li>Keychron V6</li>
             </ul>
 
             <h2>Software</h2>
@@ -41,9 +37,10 @@
                         <li>Simple PHP CS Fixer</li>
                     </ul>
                 </li>
+                <li><a href="https://iterm2.com/">iTerm 2</a></li>
+                <li><a href="https://herd.laravel.com">Laravel Herd</a></li>
                 <li><a href="https://tinkerwell.app/">Tinkerwell</a></li>
                 <li><a href="https://phpmon.app/">PHP Monitor</a></li>
-                <li><a href="https://www.warp.dev/">Warp</a></li>
                 <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
                 <li><a href="https://www.sublimemerge.com/">Sublime Merge</a></li>
                 <li><a href="https://tableplus.com/">Table Plus</a></li>

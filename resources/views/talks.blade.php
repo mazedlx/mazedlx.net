@@ -9,7 +9,12 @@
 
         <div class="grid prose lg:grid-cols-2">
             <div class="flex flex-col space-y-2">
-                <h2>What's new in PHP8.2</h2>
+                <h2>What's new in PHP 8.3</h2>
+                <a
+                    href="https://speakerdeck.com/mazedlx/whats-new-in-php-8-dot-3">https://speakerdeck.com/mazedlx/whats-new-in-php-8-dot-3</a>
+            </div>
+            <div class="flex flex-col space-y-2">
+                <h2>What's new in PHP 8.2</h2>
                 <a
                     href="https://speakerdeck.com/mazedlx/whats-new-in-php8-dot-2">https://speakerdeck.com/mazedlx/whats-new-in-php8-dot-2</a>
             </div>
@@ -20,7 +25,7 @@
             </div>
 
             <div class="flex flex-col space-y-2">
-                <h2>What's new in PHP8.1</h2>
+                <h2>What's new in PHP 8.1</h2>
                 <a
                     href="https://speakerdeck.com/mazedlx/whats-new-in-php8-dot-1">https://speakerdeck.com/mazedlx/whats-new-in-php8-dot-1</a>
             </div>

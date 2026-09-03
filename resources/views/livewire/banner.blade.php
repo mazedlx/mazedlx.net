@@ -2,7 +2,7 @@
     x-cloak
     x-show="open"
     x-data="{
-        open: @entangle('open')
+        open: @entangle('open').live
     }"
     class="relative bg-white"
 >
@@ -23,7 +23,7 @@
             <button
                 wire:click="hide"
                 type="button"
-                class="flex p-2 rounded-md hover:text-green-400 focus:outline-none focus:ring-2"
+                class="flex p-2 rounded-md hover:text-green-400 focus:outline-hidden focus:ring-2"
             >
                 <span class="sr-only">Dismiss</span>
                 <span class="text-2xl">&times;</span>
