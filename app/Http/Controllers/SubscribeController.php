@@ -20,7 +20,7 @@ class SubscribeController extends Controller
             ],
         ]);
 
-        $email = \request('email');
+        $email = request('email');
         $token = Str::random(40);
 
         Subscriber::create([
@@ -31,6 +31,6 @@ class SubscribeController extends Controller
         Mail::to($email)
             ->send(new ConfirmSubscription($email, $token));
 
-        return \redirect(\route('subscribed'));
+        return redirect(route('subscribed'));
     }
 }
